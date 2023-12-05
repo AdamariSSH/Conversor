@@ -1,0 +1,37 @@
+<html>
+<title>Conversor</title>
+<body>
+
+<h2>Conversor de temperaturas</h2>
+<p>Escriba aqui el valor de la temperatura que deseas convertir:</p>
+
+
+<label for="conversor">conversion:</label>
+<select name="convertir" id="convertir">
+    <option value="Celcius">Celcius</option>
+  <option value="Farenheit">Farenheit</option>
+  <option value="Kelvin">Kelvin</option>
+  
+</select>
+
+<p>
+  <label>Grados</label>
+  <imput id="inputGrados" type="number" placeholder=" grados">
+  <button onclick="Convertir()">Calcular</button>
+
+
+</p>
+<p>Farenheit: <span id="Farenheit"></span></p>
+<p>Kelvin: <span id="Kelvin"></span></p>
+<p>Celcius: <span id="Kelvin"></span></p>
+
+<script>
+function Convertir() {
+  var temp = document.getElementById("inputGrados").value;
+  document.getElementById("Farenheit").innerHTML=((temp*9/5)+32);
+  document.getElementById("Kelvin").innerHTML=(parseInt(temp)+273);
+  document.getElementById("Celcius").innerHTML=(parseInt(temp)+273);
+}
+</script>
+</body>
+</html>
